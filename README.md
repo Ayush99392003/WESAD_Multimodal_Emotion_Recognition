@@ -1,89 +1,89 @@
-📊 WESAD Multimodal Emotion Recognition
+# 📊 WESAD Multimodal Emotion Recognition
+
 This repository contains implementations of several machine learning models (LDA, Random Forest, Decision Tree, AdaBoost, KNN) for emotion classification using the WESAD dataset. Each script evaluates various combinations of chest and wrist sensor modalities.
 
-📁 Contents
-File Name	Model Type
-app_lda.py	Linear Discriminant Analysis (LDA)
-app_rf.py	Random Forest
-appdt.py	Decision Tree
-appada.py	AdaBoost with max depth = 100
-appknn.py	K-Nearest Neighbors
+## 📁 Contents
 
-🧪 Dataset
-Dataset used: WESAD - Wearable Stress and Affect Detection
+| File Name       | Model Type         |
+|----------------|--------------------|
+| `app_lda.py`   | Linear Discriminant Analysis (LDA) |
+| `app_rf.py`    | Random Forest       |
+| `appdt.py`     | Decision Tree       |
+| `appada.py`    | AdaBoost with max depth = 100 |
+| `appknn.py`    | K-Nearest Neighbors |
 
-Ensure the WESAD dataset folder is placed in the same directory as the scripts, with subject .pkl files properly organized.
+## 🧪 Dataset
 
-🛠️ How to Run
+- Dataset used: **[WESAD - Wearable Stress and Affect Detection](https://archive.ics.uci.edu/ml/datasets/WESAD)**
+- Ensure the `WESAD` dataset folder is placed in the same directory as the scripts, with subject `.pkl` files properly organized.
+
+## 🛠️ How to Run
+
 Each script is standalone. You can run them via:
 
-bash
-Copy code
+```bash
 python app_lda.py
 python app_rf.py
 python appdt.py
 python appada.py
 python appknn.py
+```
+
 Results will be saved in:
+- CSV format: accuracy and F1-scores across folds
+- Text summary files for quick insight
 
-CSV format: accuracy and F1-scores across folds
+## 📈 Output
 
-Text summary files for quick insight
+- `wesad_*_modality_comparison_results.csv`: detailed metrics across all modality combinations.
+- `*_summary.txt`: summary of the best-performing combinations.
 
-📈 Output
-wesad_*_modality_comparison_results.csv: detailed metrics across all modality combinations.
+## 📦 Dependencies
 
-*_summary.txt: summary of the best-performing combinations.
-
-📦 Dependencies
 Install dependencies with:
 
-bash
-Copy code
+```bash
 pip install numpy pandas scikit-learn scipy tqdm joblib
-🧠 Modalities Evaluated
+```
+
+## 🧠 Modalities Evaluated
+
 Each script processes combinations of:
-
-Chest sensors: ACC, ECG, EDA, EMG, Resp, Temp
-
-Wrist sensors: ACC, BVP, EDA, TEMP
+- Chest sensors: `ACC`, `ECG`, `EDA`, `EMG`, `Resp`, `Temp`
+- Wrist sensors: `ACC`, `BVP`, `EDA`, `TEMP`
 
 Modalities include:
+- Single sensors
+- All sensors (per device)
+- Physiological (excluding ACC)
+- Combined chest & wrist
 
-Single sensors
+---
 
-All sensors (per device)
+## 🔼 How to Upload This Project to GitHub
 
-Physiological (excluding ACC)
+1. **Initialize Git**:
+   ```bash
+   git init
+   ```
 
-Combined chest & wrist
+2. **Add Files**:
+   ```bash
+   git add .
+   ```
 
-🔼 How to Upload This Project to GitHub
-Initialize Git:
+3. **Commit Changes**:
+   ```bash
+   git commit -m "Initial commit - Added WESAD model evaluation scripts"
+   ```
 
-bash
-Copy code
-git init
-Add Files:
+4. **Create a GitHub Repo**:
+   - Go to GitHub.
+   - Create a new repository (do NOT initialize with README if you already have one).
 
-bash
-Copy code
-git add .
-Commit Changes:
-
-bash
-Copy code
-git commit -m "Initial commit - Added WESAD model evaluation scripts"
-Create a GitHub Repo:
-
-Go to GitHub.
-
-Create a new repository (do NOT initialize with README if you already have one).
-
-Push to GitHub:
-
-bash
-Copy code
-git remote add origin https://github.com/your-username/your-repo-name.git
-git branch -M main
-git push -u origin main
+5. **Push to GitHub**:
+   ```bash
+   git remote add origin https://github.com/your-username/your-repo-name.git
+   git branch -M main
+   git push -u origin main
+   ```
